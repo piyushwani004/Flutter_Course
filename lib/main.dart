@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import 'Pages/home_Page.dart';
 import 'Pages/login_page.dart';
 
 void main() {
@@ -11,6 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: GoogleFonts.lato().fontFamily,
+      ),
       routes: {
         "/": (context) => LoginPage(), 
       },
