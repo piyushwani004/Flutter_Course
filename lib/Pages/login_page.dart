@@ -1,3 +1,4 @@
+import 'package:first_flutter_project/utils/my_routs.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -7,6 +8,7 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   String name = "";
+  bool changeButton = false;
 
   @override
   Widget build(BuildContext context) {
@@ -53,17 +55,26 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: 40,
                   ),
-                  Container(
-                    width: 100,
-                    height: 50,
-                    alignment: Alignment.center,
-                    child: Text("Login",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18)),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple,
+                  InkWell(
+                    onTap: () {
+                      setState(() {
+                        changeButton = true;
+                      });
+                      // Navigator.pushNamed(context, MyRouts.homeRouts);
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      width: changeButton ? 50 : 100,
+                      height: 50,
+                      alignment: Alignment.center,
+                      child: Text("Login",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18)),
+                      decoration: BoxDecoration(
+                          color: Colors.deepPurple,
+                          borderRadius: BorderRadius.circular(8)),
                     ),
                   ),
 
