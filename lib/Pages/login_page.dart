@@ -1,4 +1,3 @@
-import 'package:first_flutter_project/utils/my_routs.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -54,13 +53,27 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(
                     height: 40,
                   ),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, MyRouts.homeRouts);
-                    },
-                    child: Text("Login"),
-                    style: TextButton.styleFrom(minimumSize: Size(120, 40)),
+                  Container(
+                    width: 100,
+                    height: 50,
+                    alignment: Alignment.center,
+                    child: Text("Login",
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18)),
+                    decoration: BoxDecoration(
+                      color: Colors.deepPurple,
+                    ),
                   ),
+
+                  // ElevatedButton(
+                  //   onPressed: () {
+                  //     Navigator.pushNamed(context, MyRouts.homeRouts);
+                  //   },
+                  //   child: Text("Login"),
+                  //   style: TextButton.styleFrom(minimumSize: Size(120, 40)),
+                  // ),
                 ],
               ),
             ),
