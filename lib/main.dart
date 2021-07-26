@@ -1,5 +1,5 @@
+import 'package:first_flutter_project/widgets/myTheme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'package:first_flutter_project/Pages/home_Page.dart';
 import 'package:first_flutter_project/utils/my_routs.dart';
@@ -14,9 +14,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
+      theme: MyTheme.lightTheme(context),
+      darkTheme: MyTheme.darkTheme(context),
       routes: {
         "/": (context) => HomePage(),
         MyRouts.loginRouts: (context) => LoginPage(),
@@ -25,4 +24,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
