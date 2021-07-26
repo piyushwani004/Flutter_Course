@@ -1,6 +1,7 @@
 import 'package:first_flutter_project/models/catalog.dart';
 import 'package:first_flutter_project/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../widgets/my_drawer.dart';
 
@@ -18,8 +19,9 @@ class _HomePageState extends State<HomePage> {
     loadData();
   }
 
-  loadData() {
-    
+  loadData() async {
+    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
+    print(catalogJson);
   }
 
   @override
