@@ -26,11 +26,11 @@ class _HomePageState extends State<HomePage> {
     var productData = decodData["products"];
     CatalogModel.items =
         List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
         title: Text("Catalog App"),
