@@ -13,7 +13,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
   @override
   void initState() {
     super.initState();
@@ -21,9 +20,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
-    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
-    var decodData = jsonDecode(catalogJson);
-    print(decodData);
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.json");
+    final decodData = jsonDecode(catalogJson);
+    var productData = decodData["products"];
+    print(productData);
   }
 
   @override
