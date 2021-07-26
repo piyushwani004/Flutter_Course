@@ -13,6 +13,16 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() {
+    
+  }
+
+  @override
   Widget build(BuildContext context) {
     final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
     return Scaffold(
