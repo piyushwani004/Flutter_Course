@@ -4,9 +4,14 @@ import 'package:flutter/material.dart';
 
 import '../widgets/my_drawer.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
